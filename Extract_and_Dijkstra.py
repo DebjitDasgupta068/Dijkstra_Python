@@ -1,15 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Mar 27 14:00:37 2021
-
-@author: Subir
-"""
 import ast
 import mysql.connector
 mydb=mysql.connector.connect(
      host="localhost",
      user="root",
-     password="Abcd@1234",
+     password="yourpassword",
      database="Kolkata"
 )
 
@@ -23,8 +17,7 @@ for i in rows:
     x=i[1]
     res=ast.literal_eval(x)
     Adjacency_list[i[0]]=res
-#for vertex in Adjacency_list:
-    #print(vertex," -> ",Adjacency_list[vertex])
+
     
 #for finding out the Adjacent_nodes_list for a particular vertex
 
